@@ -1,0 +1,42 @@
+server:
+  port: 20003
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        # 属性重载
+        overrides:
+          test: mytest
+        git:
+          uri: https://github.com/Eroding/config-repo.git
+          force-pull: true
+          # 将配置文件放到接入方服务名称对应文件夹下面
+          search-paths: '{application}'
+          # username:
+          # password:
+          default-label: main
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:20000/eureka/
+      #当config注册到eureka注册中心时候，要多写一段话
+  instance:
+    instance-id: ${eureka.instace.ip-address}:${server.port}
+    ip-address: #自己的服务器私网地址
+    prefer-ip-address: true
+
+## 开启所有actuator-endpoint
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  security:
+    enabled: false

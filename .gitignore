@@ -1,0 +1,18 @@
+# Project exclude paths
+/common/foodie-cloud-common/target/
+/common/foodie-cloud-shared-pojo/target/
+/common/foodie-cloud-web-components/target/
+/domain/auth/foodie-auth-api/target/
+/domain/auth/foodie-auth-service/target/
+/domain/item/foodie-item-api/target/
+/domain/item/foodie-item-mapper/target/
+/domain/item/foodie-item-pojo/target/
+/domain/item/foodie-item-service/target/
+/domain/item/foodie-item-web/target/
+/domain/user/foodie-user-api/target/
+/domain/user/foodie-user-mapper/target/
+/domain/user/foodie-user-pojos/target/
+/domain/user/foodie-user-service/target/
+/platform/config-server/target/
+/platform/gateway/target/
+/platform/register-center/target/
