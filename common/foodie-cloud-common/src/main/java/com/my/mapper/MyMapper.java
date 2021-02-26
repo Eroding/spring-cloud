@@ -29,6 +29,7 @@ import tk.mybatis.mapper.common.MySqlMapper;
 
 /**
  * 继承自己的MyMapper
+ * 测试一下testA分支
  */
 public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 }
