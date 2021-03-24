@@ -32,4 +32,8 @@ import tk.mybatis.mapper.common.MySqlMapper;
  * 测试一下testA分支
  */
 public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
+
+    public static void main(String[] args) {
+
+    }
 }
